@@ -1,0 +1,2 @@
+import Icon from '../common/Icon';
+export default function TrustSection(){return <section className="trust"><div className="container"><p>Tecnologia desenvolvida para negócios modernos.</p><div>{[['Code2','Software personalizado'],['Layers','Infraestrutura escalável'],['ShieldCheck','Soluções seguras'],['Headphones','Suporte especializado']].map(([icon,label])=><span key={label}><Icon name={icon} size={21}/>{label}</span>)}</div></div></section>;}

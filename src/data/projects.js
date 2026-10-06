@@ -1,0 +1,4 @@
+export const projects = [
+{id:'isp',title:'Plataforma de Gestão ISP',categories:['Software','Networking'],description:'Plataforma demonstrativa para gestão de clientes, planos, pagamentos e serviços de um provedor de internet, incluindo integração com infraestrutura de rede.',technologies:['React','Node.js','Express','MySQL','REST API','MikroTik','JWT','Cloud'],features:['Gestão de clientes','Gestão de planos','Pagamentos','Activação de serviços','Integração com MikroTik','Dashboard administrativo']},
+{id:'hotspot',title:'Plataforma Hotspot',categories:['Software','Networking'],description:'Conceito demonstrativo de uma plataforma para gestão de acesso Wi-Fi, vouchers, pacotes e pagamentos integrada com infraestrutura MikroTik.',technologies:['React','Node.js','REST API','MikroTik','Cloud'],features:['Gestão de acesso Wi-Fi','Vouchers e pacotes','Pagamentos','Integração com MikroTik']}
+];

@@ -1,0 +1,2 @@
+import Button from '../ui/Button';
+export default function CTASection(){return <section className="cta-section"><div className="container cta-inner"><div><p className="eyebrow">O PRÓXIMO PASSO COMEÇA AQUI</p><h2>Tem um projecto em mente?</h2><p>Vamos transformar a sua ideia numa solução tecnológica eficiente e preparada para crescer.</p></div><div className="button-row"><Button>Falar com a Detality</Button><Button secondary to="/contactos?tipo=orcamento">Solicitar Orçamento</Button></div></div></section>;}

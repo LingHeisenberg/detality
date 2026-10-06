@@ -1,0 +1,1 @@
+export const navigation = [{label:'Início',to:'/'},{label:'Serviços',to:'/servicos'},{label:'Soluções',to:'/solucoes'},{label:'Portfólio',to:'/portfolio'},{label:'Sobre',to:'/sobre'},{label:'Contactos',to:'/contactos'}];

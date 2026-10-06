@@ -1,0 +1,6 @@
+import {Mail,MapPin,ArrowUpRight} from 'lucide-react';
+import SEO from '../components/common/SEO';
+import PageIntro from '../components/common/PageIntro';
+import ContactForm from '../components/forms/ContactForm';
+import {siteConfig} from '../config/siteConfig';
+export default function Contact(){return <><SEO title="Contactos e orçamento"/><PageIntro eyebrow="CONTACTOS" title="Vamos construir o próximo passo." description="Tem uma ideia, um desafio ou um projecto em mente? Fale connosco e descubra como podemos ajudar."/><section className="section"><div className="container contact-grid"><aside><p className="eyebrow">FALE COM A DETALITY</p><h2>Uma conversa pode ser o início de uma grande solução.</h2><div className="contact-item"><Mail/><div><small>Informações gerais</small><a href={`mailto:${siteConfig.emails.general}`}>{siteConfig.emails.general}<ArrowUpRight size={16}/></a></div></div><div className="contact-item"><Mail/><div><small>Projectos e orçamentos</small><a href={`mailto:${siteConfig.emails.commercial}`}>{siteConfig.emails.commercial}<ArrowUpRight size={16}/></a></div></div><div className="contact-item"><MapPin/><div><small>O nosso mercado</small><p>Moçambique · Atendimento remoto a clientes internacionais</p></div></div>{siteConfig.phone&&<a href={`tel:${siteConfig.phone}`}>{siteConfig.phone}</a>}</aside><ContactForm/></div></section></>;}

@@ -1,0 +1,2 @@
+import { navigation } from '../data/navigation';
+export const siteConfig = { companyName:'Detality', domain:'https://detality.com', description:'A Detality desenvolve software, websites, infraestrutura de redes e soluções tecnológicas para empresas em Moçambique.', emails:{general:'info@detality.com',commercial:'comercial@detality.com',support:'suporte@detality.com'}, phone:'', whatsapp:import.meta.env.VITE_WHATSAPP_NUMBER || '', socials:{linkedin:'',facebook:'',instagram:''}, navigation };
