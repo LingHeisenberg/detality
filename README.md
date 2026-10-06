@@ -52,11 +52,11 @@ Sem `VITE_API_URL`, valida os dados e mostra sucesso de validação, deixando ex
 3. Configure as variáveis de ambiente necessárias e faça deploy.
 4. Adicione `detality.com` e siga os registos DNS indicados pela Vercel.
 
-`vercel.json` encaminha rotas da SPA para `index.html`, preservando o prefixo `/api/`. Verifique `/servicos`, `/portfolio`, `/sobre` e `/contactos` ao actualizar o browser. A página 404 é renderizada pelo React; numa hospedagem estática SPA o HTTP pode continuar a ser 200. A página 404 inclui `noindex`.
+O build pré-renderiza as oito páginas em HTML. `vercel.json` usa `cleanUrls` para servir esses ficheiros nas respectivas rotas. Rotas desconhecidas devolvem a página `404.html`, com `noindex`, em vez de um fallback com HTTP 200. A pasta `/api` fica disponível para funções Vercel.
 
 ## SEO e acessibilidade
 
-Metadados iniciais em `index.html`; título, descrição, Open Graph e canonical actualizados pelo componente SEO por rota. Para indexação que exija HTML de cada rota sem JavaScript, considere pré-renderização numa fase posterior. Sitemap e robots usam o domínio oficial. Google Fonts carrega Inter; existe fallback sans-serif. Sem analytics ou cookies de rastreamento. Inclui link para saltar conteúdo, foco visível, menu com Escape, labels, mensagens acessíveis e redução de movimento.
+O comando `npm run build` executa Vite e `scripts/prerender.mjs`, gerando conteúdo HTML e metadados próprios para todas as páginas. `src/config/seoConfig.js` centraliza títulos e descrições; o componente SEO também actualiza metadados na navegação React. A homepage inclui JSON-LD WebSite e Organization para identificar a marca Detality. Sitemap e robots usam o domínio oficial. Google Fonts carrega Inter; existe fallback sans-serif. Sem analytics ou cookies de rastreamento. Inclui link para saltar conteúdo, foco visível, menu com Escape, labels, mensagens acessíveis e redução de movimento.
 
 ## Pendências antes do lançamento
 
@@ -69,3 +69,4 @@ Metadados iniciais em `index.html`; título, descrição, Open Graph e canonical
 - Configurar domínio/DNS na Vercel e validar o website publicado.
 
 Não foram inventados clientes, testemunhos, números, certificações, escritórios ou preços.
+
